@@ -2,7 +2,6 @@ package con.hibernate.HibernateTutorial;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 public class Student {
@@ -10,6 +9,7 @@ public class Student {
 	private int id;
 	private String name;
 	private String city;
+	private Certificate certificate;
 
 	public Student() {
 		super();
@@ -49,6 +49,14 @@ public class Student {
 	@Override
 	public String toString() {
 		return this.id + " : " + this.name + " : " + this.city;
+	}
+
+	public Certificate getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(Certificate certificate) {
+		this.certificate = certificate;
 	}
 
 }
